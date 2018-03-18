@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String[] mArray = {"First Item", "Second Item", "Third Item", "Fourth Item", "Fifth Item", "..."};
+    private String[] mArray = {"First Item", "Second Item", "Third Item", "Fourth Item", "Fifth Item", "....."};
 
     private ListView mListView;
 
