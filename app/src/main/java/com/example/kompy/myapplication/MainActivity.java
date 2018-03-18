@@ -25,13 +25,17 @@ public class MainActivity extends AppCompatActivity {
     private void setUpList() {
         final ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mArray);
         mListView.setAdapter(adapter);
-        mListView.setOnItemClickListener((adapterView, view, i, l) -> openDialogForItem(i));
+        mListView.setOnItemClickListener((adapterView, view, i, l) -> Toast.makeText(getApplicationContext(), mArray[i], Toast.LENGTH_SHORT).show());
+        mListView.setOnItemLongClickListener((adapterView, view, i, l) -> {
+            openDialogForItem(i);
+            return false;
+        });
     }
 
     private void openDialogForItem(int position) {
         new AlertDialog.Builder(this)
                 .setTitle(mArray[position])
-                .setMessage(R.string.some_text)
+                .setMessage(R.string.some_other_text)
                 .setNegativeButton(R.string.ok, (dialogInterface, i) -> Toast.makeText(getApplicationContext(), mArray[position], Toast.LENGTH_SHORT).show())
                 .setPositiveButton(R.string.cancel, null)
                 .show();

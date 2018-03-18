@@ -3,4 +3,5 @@
     <string name="some_text">Some text...</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+    <string name="some_other_text">Some other text?</string>
 </resources>
